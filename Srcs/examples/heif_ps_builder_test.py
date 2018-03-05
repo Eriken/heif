@@ -12,7 +12,7 @@ PHOTOSBUILDER_HOST = "localhost"
 PHOTOSBUILDER_PORT = 8095
 B2_HOST = "10.0.55.121"
 B2_PORT = "80"
-B2_API_KEY = "n6dl64BsbmCpzxyL7gnOy5gq8ZhDCH6xDBLtXdqLNoM824V"
+B2_API_KEY = "fVoxUuR4dDqeYyXvdcWUD08fHus1XOcb"
 TEST_USERNAME = "roland"
 PHOTOSTORE_HOST = "localhost"
 PHOTOSTORE_PORT = 8097
@@ -97,7 +97,7 @@ def get_download_hash(heic_file):
 
     if response.status != 200:
         conn.close()
-        print "bad response code %d from b2" % response
+        print "bad response code %d from b2" % response.status
         return False
 
     #check if builder responds correctly
